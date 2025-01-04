@@ -1,3 +1,4 @@
+
 -- Foot profile
 local http = require("socket.http") -- LuaSocket for HTTP requests
 local json = require("cjson") 
@@ -12,7 +13,8 @@ stations_data = nil
 
 
 function fetch_pollution_data()
-  local url = "http://localhost:8008/routes/api/pollution"
+  local url = "http://128.199.51.173:8000/routes/api/pollution/NO2"
+
   local response, status = http.request(url)
 
   if status == 200 and response then
@@ -357,3 +359,4 @@ return {
   process_turn = process_turn,
   process_segment = process_segment
 }
+
