@@ -347,7 +347,7 @@ function process_segment(profile, segment)
   --print(avg_pollution)
 
   -- Adjust weight and duration based on pollution level
-  segment.weight = segment.weight + (avg_pollution^1.4)
+  segment.weight = segment.weight + (avg_pollution^3)
 end
 
 
